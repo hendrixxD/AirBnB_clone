@@ -1,6 +1,5 @@
                             AirBnB clone - The console
-                          ==============================
-![Hbnb-img](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20220901%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220901T174438Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=6a7feae38256349f9f440351079fc93d08f193bb8994dafe1f2d4f111e44320e.png)
+                            =========================
 
 
 ## Objects To be Created
@@ -77,10 +76,10 @@ $
 
 All tests should also pass in non-interactive mode: $ echo "python3 -m unittest discover tests" | bash
 
-![Hbnb-img](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20220901%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220901T174438Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f70a620862e1b236384aa5f84d4a6a18c046fa40d064d37c04c4295194284553.png)
-
 
 ## AUTHORS
-Hendrixx Joshua @HendrixxSdiddy
-Astewul Derseh  @
+Hendrixx Joshua<br> 
+Twitter - @HendrixxSdiddy<br>
+
+Astewul Derseh  
 
