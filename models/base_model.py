@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""class BaseModel"""
+""" class BaseModel """
 
 from datetime import datetime
 from uuid import uuid4
 
 class BaseModel:
-    """Constructing class BaseModel"""
+    """ Constructing class BaseModel """
     def __init__(self, *args, **kwargs):
         if kwargs:
             for key, value in kwargs.items():
@@ -28,18 +28,16 @@ class BaseModel:
             self.updated_at = datetime.now()
             models.storage.new(self)
     def __str__(self):
-        """changing to string"""
+        """ changing to string """
         return('[' + type(self).__name__ + '] (' + str(self.id) + ') ' + str(self.__dict__))
     def save(self):
-        """Saving"""
+        """ Saving """
         self.updated_at = datetime.now()
         models.storage.save()
     def to_dict(self):
-        """Return dict"""
+        """ Return dict """
         aux_dict =self.__dict__.copy()
         aux_dict['__class__'] = self.__class__.__name__
         aux_dict['created_at'] = self.created_at.isoformat()
         aux_dict['updated_at'] = self.updated_at.isoformat()
         return aux_dict
-
-
