@@ -1,13 +1,15 @@
 #!/usr/bin/python3
-""" class BaseModel """
+""" Class BaseModel """
 from datetime import datetime
 from uuid import uuid4
+# import models
+
 
 class BaseModel:
-    """ Constructing class BaseModel """
+    """ construct """
 
     def __init__(self, *args, **kwargs):
-        """ const """
+        """ Construct """
         if kwargs:
             for key, value in kwargs.items():
                 if key == '__class__':
@@ -20,24 +22,28 @@ class BaseModel:
                     self.id = str(uuid4())
                 if 'created_at' not in kwargs.keys():
                     self.created_at = datetime.now()
-                if 'updated_at' not in kwargs.key():
+                if 'updated_at' not in kwargs.keys():
                     self.updated_at = datetime.now()
                 setattr(self, key, value)
         else:
             self.id = str(uuid4())
             self.created_at = datetime.now()
-            self.updated_at = datetime.now()
+            self.updated_at = self.created_at
             models.storage.new(self)
+
     def __str__(self):
-        """ changing to string """
-        return('[' + type(self).__name__ + '] (' + str(self.id) + ') ' + str(self.__dict__))
+        """ String """
+        return('[' + type(self).__name__ + '] (' + str(self.id) +
+               ') ' + str(self.__dict__))
+
     def save(self):
-        """ Saving """
+        """ save function """
         self.updated_at = datetime.now()
         models.storage.save()
+
     def to_dict(self):
-        """ Return dict """
-        aux_dict =self.__dict__.copy()
+        """ Return a dictonary """
+        aux_dict = self.__dict__.copy()
         aux_dict['__class__'] = self.__class__.__name__
         aux_dict['created_at'] = self.created_at.isoformat()
         aux_dict['updated_at'] = self.updated_at.isoformat()
