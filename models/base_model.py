@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """ class BaseModel """
-
 from datetime import datetime
 from uuid import uuid4
 
 class BaseModel:
     """ Constructing class BaseModel """
+
     def __init__(self, *args, **kwargs):
+        """ const """
         if kwargs:
             for key, value in kwargs.items():
                 if key == '__class__':
