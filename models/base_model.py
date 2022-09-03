@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-""" Class BaseModel """
+""" BaseModel """
 from datetime import datetime
 from uuid import uuid4
-# import models
-
 
 class BaseModel:
-    """ construct """
+    """ const """
 
     def __init__(self, *args, **kwargs):
-        """ Construct """
+        """ Const """
         if kwargs:
             for key, value in kwargs.items():
                 if key == '__class__':
@@ -32,17 +30,17 @@ class BaseModel:
             models.storage.new(self)
 
     def __str__(self):
-        """ String """
+        """ string """
         return('[' + type(self).__name__ + '] (' + str(self.id) +
                ') ' + str(self.__dict__))
 
     def save(self):
-        """ save function """
+        """ saving """
         self.updated_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
-        """ Return a dictonary """
+        """ dictonaries """
         aux_dict = self.__dict__.copy()
         aux_dict['__class__'] = self.__class__.__name__
         aux_dict['created_at'] = self.created_at.isoformat()
