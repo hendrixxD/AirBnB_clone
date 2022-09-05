@@ -12,27 +12,28 @@ class BaseModel:
     """BaseModel class"""
 
     def __init__(self, *args, **kwargs):
-        if kwargs:
+        if not kwargs:
+            self.id = str(uuid.uuid4())
+            self.created_at = self.updated_at = datetime.now()
+            models.storage.new(self)
+        else:
             for key, value in kwargs.items():
-                if key = "created_at" or key = "updated_at":
+                if key == "created_at" or key == "updated_at":
                     value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
                 if key != "__class__":
                     setattr(self, key, value)
-                else:
-                    self.id = str(uuid.uuid4())
-                    self.created_at = self.updated_at = datetime.now()
 
     def save(self):
         """updates the public instance attribute
         updated_at: with the current datetime
         """
-        self.update = datetime.now()
+        self.updated_at = datetime.now()
         models.storage.save()
 
-    def __str__(self):
-        """ String """
-        return('[' + type(self).__name__ + '] (' + str(self.id) +
-               ') ' + str(self.__dict__))
+    def __str__(self) -> str:
+        """String"""
+        _class_name = self.__class__.__name__
+        return "[{}] ({}) {}".format(_class_name, self.id, self.__dict__)
 
     def to_dict(self):
         """
