@@ -1,4 +1,5 @@
-
+@import "2-header.css";
+@import "2-footer.css";
 body {
     margin: 0px;
     padding: 0px; 
