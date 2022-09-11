@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "3-header.css";
 @import "3-footer.css";
 
@@ -11,3 +12,26 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+=======
+body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	color: #484848;
+	font-size: 14px;
+	font-family:Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	vertical-align: middle;
+	display: flex;
+}
+p {
+	text-align: center;
+	vertical-align: middle;
+	color: #484848;
+
+}
+div{
+	flex: 1 0 auto;
+}
+>>>>>>> 8ebf7294f4b397c111d3ca0bfe6f03f6f853d3a2

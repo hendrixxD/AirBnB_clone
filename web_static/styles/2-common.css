@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "2-header.css";
 @import "2-footer.css";
 body {
@@ -15,3 +16,9 @@ div {
     line-height: 60px;
     text-align: center;
 
+=======
+body {
+	padding: 0;
+	margin: 0;
+}
+>>>>>>> 8ebf7294f4b397c111d3ca0bfe6f03f6f853d3a2

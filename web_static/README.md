@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ```
 Requirements
 ```
@@ -19,3 +20,6 @@ Requirements
 ![Air-bnb-progess](https://s3.amazonaws.com/intranet-projects-files/concepts/74/hbnb_step1.png)
 
 
+=======
+0x01. AirBnB clone - Web static
+>>>>>>> 8ebf7294f4b397c111d3ca0bfe6f03f6f853d3a2
