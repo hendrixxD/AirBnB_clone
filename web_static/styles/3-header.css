@@ -21,5 +21,10 @@ header div {
 	border-bottom: 1px solid #CCCCCC;
 	background-image: url(../images/logo.png);
 	background-repeat: no-repeat;
+<<<<<<< HEAD
 >>>>>>> 8ebf7294f4b397c111d3ca0bfe6f03f6f853d3a2
 }
+=======
+	background-position: 20px;
+}
+>>>>>>> 4b13d8267c73abfdb4472d242c051fe0e7ef1c0b
