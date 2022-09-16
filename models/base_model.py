@@ -1,16 +1,4 @@
 #!/usr/bin/python3
-<<<<<<< HEAD
-""" BaseModel """
-from datetime import datetime
-from uuid import uuid4
-
-class BaseModel:
-    """ const """
-
-    def __init__(self, *args, **kwargs):
-        """ Const """
-        if kwargs:
-=======
 """BaseModel that defines all common attributes/methods
 to be used for other classses"""
 
@@ -29,11 +17,9 @@ class BaseModel:
             self.created_at = self.updated_at = datetime.now()
             models.storage.new(self)
         else:
->>>>>>> 83a05abaea3de27d5aa92904724a6c056ca30d1b
             for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
                     value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
-<<<<<<< HEAD
                 if 'id' not in kwargs.keys():
                     self.id = str(uuid4())
                 if 'created_at' not in kwargs.keys():
@@ -54,15 +40,13 @@ class BaseModel:
 
     def save(self):
         """ saving """
-=======
-                if key != "__class__":
-                    setattr(self, key, value)
+        if key != "__class__":
+            setattr(self, key, value)
 
     def save(self):
         """updates the public instance attribute
         updated_at: with the current datetime
         """
->>>>>>> 83a05abaea3de27d5aa92904724a6c056ca30d1b
         self.updated_at = datetime.now()
         models.storage.save()
 
@@ -72,14 +56,13 @@ class BaseModel:
         return "[{}] ({}) {}".format(_class_name, self.id, self.__dict__)
 
     def to_dict(self):
-<<<<<<< HEAD
         """ dictonaries """
         aux_dict = self.__dict__.copy()
         aux_dict['__class__'] = self.__class__.__name__
         aux_dict['created_at'] = self.created_at.isoformat()
         aux_dict['updated_at'] = self.updated_at.isoformat()
         return aux_dict
-=======
+
         """
         Method to return a dict containing all key/value of __dict__
         instance
@@ -90,4 +73,3 @@ class BaseModel:
         dic['updated_at'] = self.updated_at.isoformat()
 
         return (dic)
->>>>>>> 83a05abaea3de27d5aa92904724a6c056ca30d1b

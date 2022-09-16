@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+@import "3-header.css";
+@import "3-footer.css";
+
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #484848;
+    font-size: 14px;
+    font-family: Circular, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+=======
 body {
 	height: 100%;
 	display: flex;
@@ -19,3 +34,4 @@ p {
 div{
 	flex: 1 0 auto;
 }
+>>>>>>> 8ebf7294f4b397c111d3ca0bfe6f03f6f853d3a2
